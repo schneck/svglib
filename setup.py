@@ -12,7 +12,7 @@ v = sys.version_info
 if (v.major, v.minor) < (2, 7):
     install_requires.append('argparse')
 
-needs_pytest = {'pytest', 'test', 'ptr'}.intersection(sys.argv)
+needs_pytest = False # {'pytest', 'test', 'ptr'}.intersection(sys.argv)
 pytest_runner = ['pytest-runner'] if needs_pytest else []
 
 setup(
